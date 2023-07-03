@@ -23,7 +23,7 @@ labels:
 spec:
   # Use service account that can deploy to all namespaces
 #  serviceAccountName: cd-jenkins
-  serviceAccountName: tmp-jenkins-deploy
+#  serviceAccountName: tmp-jenkins-deploy
   containers:
   #- name: golang
   #  image: golang:1.10
