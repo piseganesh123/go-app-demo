@@ -97,6 +97,7 @@ spec:
         container('kubectl') {
           //validation stage
           sh("kubectl get pod")
+          sh("kubectl create deployment nginx --image nginx")
           // Create namespace if it doesn't exist
 //          sh("kubectl get ns ${env.BRANCH_NAME} || kubectl create ns ${env.BRANCH_NAME}")
 //          // Don't use public load balancing for development branches
