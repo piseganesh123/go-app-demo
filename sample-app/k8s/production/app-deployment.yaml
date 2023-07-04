@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoapp-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app-ui
+  template:
+    metadata:
+      labels:
+        app: demo-app-ui
+    spec:
+      containers:
+      - image: piseganesh123/java-demo-app:1.0.13
+        name: demo-app-ui
+        ports:
+        - containerPort: 8080
