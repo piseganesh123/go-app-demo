@@ -55,8 +55,9 @@ spec:
 //          sh("sed -i.bak 's#corelab/gceme:1.0.0#${IMAGE_TAG}#' ./k8s/production/*.yaml")
 //          sh("echo http://`kubectl --namespace=production get service/${FE_SVC_NAME} -o jsonpath='{.status.loadBalancer.ingress[0].ip}'` > ${FE_SVC_NAME}")
           sh("echo In Deploy Production stage")
-          sh("kubectl apply -f ./k8s/production/app-deployment.yaml")
-          sh("kubectl apply -f ./k8s/production/java-demo-service.yaml")
+          sh("pwd")
+          sh("kubectl apply -f ./sample-app/k8s/production/app-deployment.yaml")
+          sh("kubectl apply -f ./sample-app/k8s/production/java-demo-service.yaml")
           
         }
       }
