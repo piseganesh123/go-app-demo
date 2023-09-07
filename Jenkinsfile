@@ -24,7 +24,8 @@ spec:
   serviceAccountName: cd-jenkins
   containers:
   - name: kubectl
-    image: gcr.io/cloud-builders/kubectl@sha256:41cdfdf5e4963c3f437a9e405d71489f4e05b26b1cdf5dc9cf33d5afc48d5370
+    //image: gcr.io/cloud-builders/kubectl@sha256:41cdfdf5e4963c3f437a9e405d71489f4e05b26b1cdf5dc9cf33d5afc48d5370
+    image: bitnami/kubectl:1.27.5
     command:
     - cat
     tty: true
