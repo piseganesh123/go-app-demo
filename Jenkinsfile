@@ -12,7 +12,7 @@ pipeline {
 
   agent {
     kubernetes {
-      label 'node-java-demp-app'
+      label 'java-app-agent'
       defaultContainer 'jnlp'
       yaml """
 apiVersion: v1
